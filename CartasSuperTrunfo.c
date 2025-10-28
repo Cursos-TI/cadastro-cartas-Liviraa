@@ -26,8 +26,5 @@ int main() {
   printf("PIB: %.2lf trilhões de reais\n", pib);
   printf("Pontos Turísticos: %d\n", pontosTuristicos);
 
-
-  // Área para exibição dos dados da cidade
-
 return 0;
 } 
