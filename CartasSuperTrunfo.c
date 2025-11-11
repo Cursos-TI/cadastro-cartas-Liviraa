@@ -71,7 +71,7 @@ int main() {
 
     // Comparativo de Falso e Verdadeiro (1 e 0)
 
-   // printf("\n=== RESULTADO DA COMPARAÇÃO 1 ===\n");
+   /* printf("\n=== RESULTADO DA COMPARAÇÃO 1 ===\n");
 
    // printf("População: Carta 1 Venceu %d\n", populacao1 > populacao2);
    // printf("Área: Carta 1 venceu %d\n", area1 > area2);
@@ -85,48 +85,47 @@ int main() {
 
    // printf("\n=== RESULTADO DA COMPARAÇÃO 2 ===\n");
 
-   //  if (populacao1 > populacao2){
-   // printf("População: São Paulo venceu.\n");
-   // }
-   //  else {
-   //     printf("População: Rio de Janeiro venceu.\n");
-   //  }
+   if (populacao1 > populacao2){
+   printf("População: São Paulo venceu.\n");
+   } else {
+   printf("População: Rio de Janeiro venceu.\n");
+   }
     
-   //  if (area1 > area2){
-   //     printf("Área: São Paulo venceu.\n");
-   //  } else {
-   //     printf("Área: Rio de Janeiro venceu.\n");
-   //  }
+   if (area1 > area2){
+   printf("Área: São Paulo venceu.\n");
+   } else {
+   printf("Área: Rio de Janeiro venceu.\n");
+   }
 
-   //  if (pib1 > pib2){
-   //     printf("PIB: São Paulo venceu.\n");
-   //  } else {
-   //     printf("PIB: Rio de Janeiro venceu.\n");
-   //  }
+   if (pib1 > pib2){
+   printf("PIB: São Paulo venceu.\n");
+   } else {
+   printf("PIB: Rio de Janeiro venceu.\n");
+   }
 
-   //  if (pontosTuristicos1 > pontosTuristicos2){
-   //     printf("Pontos Turísticos: São Paulo venceu.\n");
-   //  } else {
-   //     printf("Pontos Turísticos: Rio de Janeiro venceu.\n");
-   //  }
+   if (pontosTuristicos1 > pontosTuristicos2){
+   printf("Pontos Turísticos: São Paulo venceu.\n");
+   } else {
+   printf("Pontos Turísticos: Rio de Janeiro venceu.\n");
+   }
 
-   //  if (pibpercapita1 > pibpercapita2){
-   //     printf("PIB per Capita: São Paulo venceu.\n");
-   //  } else {
-   //     printf("PIB per Capita: Rio de Janeiro venceu.\n");
-   //  }
+   if (pibpercapita1 > pibpercapita2){
+   printf("PIB per Capita: São Paulo venceu.\n");
+   } else {
+   printf("PIB per Capita: Rio de Janeiro venceu.\n");
+   }
 
-   //  if (densidade1 > densidade2){
-   //     printf("Densidade: São Paulo venceu.\n");
-   //  } else {
-   //     printf("Densidade: Rio de Janeiro venceu.\n");
-   //  }
+   if (densidade1 > densidade2){
+   printf("Densidade: São Paulo venceu.\n");
+   } else {
+   printf("Densidade: Rio de Janeiro venceu.\n");
+   }
 
-   //  if (superpoder1 > superpoder2){ 
-   //     printf("Super Poder: São Paulo venceu.\n");
-   //  } else {
-   //     printf("Super Poder: Rio de Janeiro venceu.\n");
-   //  }
+   if (superpoder1 > superpoder2){ 
+   printf("Super Poder: São Paulo venceu.\n");
+   } else {
+   printf("Super Poder: Rio de Janeiro venceu.\n");
+   }*/
 
    printf("\n=== Bem-vindo ao SUPER TRUNFO: BRASIL ===\n");
 
