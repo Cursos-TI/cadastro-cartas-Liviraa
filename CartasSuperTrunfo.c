@@ -128,82 +128,120 @@ int main() {
    //     printf("Super Poder: Rio de Janeiro venceu.\n");
    //  }
 
-   printf("\n=== RESULTADO COMPARAÇÃO 3 ===\n");
-   
-   int escolha;
-   
+   printf("\n=== Bem-vindo ao SUPER TRUNFO: BRASIL ===\n");
+
    srand(time(0));
-   // Código carta 1
-   printf("Escolha uma opção:  \n");
+   int escolha1, escolha2;
+   int vitoria1 = 0, vitoria2 = 0;
+
+   // Código carta 1 e carta 2
+   printf("Escolha o primeiro atributo:  \n");
    printf("1. População\n");
    printf("2. Área\n");
    printf("3. PIB\n");
    printf("4. Número de pontos turísticos\n");
    printf("5. Densidade demográfica\n");
-   scanf("%d", &escolha);
+   scanf("%d", &escolha1);
 
-   // Código switch / if / else if para comparação:
-   switch (escolha)
+   if (escolha1 < 1 || escolha1 > 5){
+      printf("ATRIBUTO INVÁLIDO!\n");
+      return 0;
+   }
+
+   printf("Escolha o segundo atributo:  \n");
+   scanf("%d", &escolha2);
+
+   if (escolha2 < 1 || escolha2 > 5){
+      printf("ATRIBUTO INVÁLIDO!\n");
+      return 0;
+   }
+
+   // Código escolha primeiro atributo:
+   switch (escolha1)
    {
    case 1:
       printf("Atributo: População\n");
-      if (populacao1 > populacao2){
-         printf("BRASIL: São Paulo venceu BRASIL: Rio de Janeiro. (%d de pessoas X %d de pessoas)\n", populacao1, populacao2);
-      } else if (populacao1 < populacao2){ 
-         printf("BRASIL: Rio de Janeiro venceu BRASIL: São Paulo. (%d de pessoas X %d de pessoas)\n", populacao2, populacao1);
-      } else {
-         printf("EMPATE! BRASIL: São Paulo X BRASIL: Rio de Janeiro tem a mesma quantidade de habitantes.\n");
-      }
+      (populacao1 > pontosTuristicos2) ? vitoria1++ :(populacao2 > populacao1) ? vitoria2++:
+      printf("Empate em População!\n");
       break;
    case 2:
       printf("Atributo: Área\n");
-      if (area1 > area2){
-         printf("BRASIL: São Paulo venceu BRASIL: Rio de Janeiro. (%.2f de área X %.2f de área)\n", area1, area2);
-      } else if (area1 < area2){
-         printf("BRASIL: Rio de Janeiro venceu BRASIL: São Paulo. (%.2f de área X %.2f de área)\n", area2, area1);
-      } else {
-         printf("EMPATE! BRASIL: São Paulo X BRASIL: Rio de Janeiro tem o mesmo valor de área.\n");
-      }
+      (area1 > area2) ? vitoria1++ : (area2 > area1) ? vitoria2++ :
+      printf("Empate em Área!\n");
       break;
    case 3:
       printf("Atributo: PIB\n");
-      if (pib1 > pib2){
-         printf("BRASIL: São Paulo venceu BRASIL: Rio de Janeiro. (R$ %.2f Milhões X R$ %.2f Milhões.)\n", pib1, pib2);
-      } else if (pib1 < pib2) {
-         printf("BRASIL: Rio de Janeiro venceu BRASIL: São Paulo. (R$ %.2f Milhões X R$ %.2f Milhões.)\n", pib2 ,pib1);
-      } else {
-         printf("EMPATE! BRASIL: São Paulo X BRASIL: Rio de Janeiro tem o mesmo valor de PIB.\n");
-      }
+      (pib1 > pib2) ? vitoria1++ : (pib2 > pib1) ? vitoria2++ :
+      printf("Empate em PIB!\n");
       break;
    case 4:
       printf("Atributo: Número de pontos turísticos\n");
-      if (pontosTuristicos1 > pontosTuristicos2){
-         printf("BRASIL: São Paulo venceu BRASIL: Rio de Janeiro. (%d de pontos X %d de pontos.)\n", pontosTuristicos1, pontosTuristicos2);
-      } else if (pontosTuristicos1 < pontosTuristicos2){
-         printf("BRASIL: Rio de Janeiro venceu BRASIL: São Paulo. (%d de pontos X %d de pontos.)\n", pontosTuristicos2, pontosTuristicos1);
-      } else {
-         printf("EMPATE! BRASIL: São Paulo X BRASIL: Rio de Janeiro tem a mesma quantidade de pontos.\n");
-      }
+      (pontosTuristicos1 > pontosTuristicos2) ? vitoria1++ : (pontosTuristicos2 > pontosTuristicos1) ? vitoria2++ :
+      printf("Empate em Pontos Turísticos!\n");
       break;
    case 5:
       printf("Atributo: Densidade demográfica\n");
-      if (densidade1 < densidade2){
-         printf("BRASIL: São Paulo venceu BRASIL: Rio de Janeiro. (%.2f de hab/km² X %.2f de hab/km².)\n", densidade1, densidade2);
-      } else if (densidade2 < densidade1){
-         printf("BRASIL: Rio de Janeiro venceu BRASIL: São Paulo. (%.2f de hab/km² X %.2f de hab/km².)\n", densidade2, densidade1);
-      } else {
-         printf("EMPATE! BRASIL: São Paulo X BRASIL: Rio de Janeiro tem a mesma quantidade de hab/km².\n");
-      }
+      (inverso1 < inverso2) ? vitoria1++ : (inverso2 < inverso1) ? vitoria2++ :
+      printf("Empate em densidade demográfica!\n");
       break;
    default:
       printf("Opção Inválida\n");
       break;
    }
 
+      // Código escolha segundo atributo:
+      if (escolha1 == escolha2){
+      printf("INVÁLIDO: Você escolheu o mesmo atributo!\n");
+      return 0;
+   }
+
+      // Código escolha primeiro atributo:
+   switch (escolha2)
+   {
+   case 1:
+      printf("Atributo: População\n");
+      (populacao1 > pontosTuristicos2) ? vitoria1++ :(populacao2 > populacao1) ? vitoria2++:
+      printf("Empate em População!\n");
+      break;
+   case 2:
+      printf("Atributo: Área\n");
+      (area1 > area2) ? vitoria1++ : (area2 > area1) ? vitoria2++ :
+      printf("Empate em Área!\n");
+      break;
+   case 3:
+      printf("Atributo: PIB\n");
+      (pib1 > pib2) ? vitoria1++ : (pib2 > pib1) ? vitoria2++ :
+      printf("Empate em PIB!\n");
+      break;
+   case 4:
+      printf("Atributo: Número de pontos turísticos\n");
+      (pontosTuristicos1 > pontosTuristicos2) ? vitoria1++ : (pontosTuristicos2 > pontosTuristicos1) ? vitoria2++ :
+      printf("Empate em Pontos Turísticos!\n");
+      break;
+   case 5:
+      printf("Atributo: Densidade demográfica\n");
+      (inverso1 < inverso2) ? vitoria1++ : (inverso2 < inverso1) ? vitoria2++ :
+      printf("Empate em densidade demográfica!\n");
+      break;
+   default:
+      printf("Opção Inválida\n");
+      break;
+   }
+
+   
+   printf("\n === RESULTADO DA PARTIDA! ===\n");
+   printf("Vitórias da carta 1 (%s): %d\n", cidade1, vitoria1);
+   printf("Vitórias da carta 2 (%s): %d\n", cidade2, vitoria2);
+
+   (vitoria1 > vitoria2) ? printf("Carta 1 BRASIL: São Paulo venceu!\n"):
+   (vitoria2 > vitoria1) ? printf("Carta 2 BRASIL: Rio de Janeiro venceu!\n"):
+   printf("EMPATE!\n");
+
 
 
   
   printf("\n=== Fim da Exibição ===\n");
   return 0;
+
 }
 
